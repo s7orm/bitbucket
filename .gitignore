@@ -9,4 +9,5 @@ log
 *.sqlite3
 features/settings.yml
 *.gem
-
+.project
+Gemfile.lock

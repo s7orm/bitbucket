@@ -176,12 +176,13 @@ module BitBucket
       _merge_user_into_params!(params) unless params.has_key?('user')
       filter! %w[ user type ], params
 
-      response = #if (user_name = params.delete("user"))
-                 #  get_request("/users/#{user_name}", params)
-                 #else
+      response = if (user_name = params.delete("user"))
+                   # anonymous access
+                   get_request("/users/#{user_name}", params).repositories
+                 else
                    # For authenticated user
                    get_request("/user/repositories", params)
-                 #end
+                 end
       return response unless block_given?
       response.each { |el| yield el }
     end
