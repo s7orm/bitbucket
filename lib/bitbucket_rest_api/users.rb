@@ -29,10 +29,16 @@ module BitBucket
       super(options)
     end
 
-    # Get a user
+    # Get a single unauthenticated user
     #
     # = Examples
     #  bitbucket = BitBucket.new
+    #  bitbucket.users.get 'user-name' 
+    #
+    # Get the authenticated user
+    #
+    # = Examples
+    #  bitbucket = BitBucket.new oauth_token: '...'
     #  bitbucket.users.get 'user-name'
     #
     def get(user_name = nil, params={ })
