@@ -74,14 +74,14 @@ module BitBucket
 
                :Repos           => 'repos',
                #:Error           => 'error',
-               :Issues          => 'issues'
-  #:Teams           => 'teams',
-  #:PullRequests    => 'pull_requests',
-  #:Users           => 'users',
-  #:Events          => 'events',
-  #:Search          => 'search',
-  #:PageLinks       => 'page_links',
-  #:PageIterator    => 'page_iterator',
-  #:PagedRequest    => 'paged_request'
+               :Issues          => 'issues',
+               #:Teams           => 'teams',
+               #:PullRequests    => 'pull_requests',
+               :Users           => 'users'
+               #:Events          => 'events',
+               #:Search          => 'search',
+               #:PageLinks       => 'page_links',
+               #:PageIterator    => 'page_iterator',
+               #:PagedRequest    => 'paged_request'
 
 end # BitBucket
